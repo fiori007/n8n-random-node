@@ -8,7 +8,7 @@ O nó utiliza a [API do Random.org](https://www.random.org/), oferecendo resulta
 
 ## Pré-requisitos
 
-Antes de iniciar, certifique-se de ter os seguintes itens instalados em sua máquina:
+Antes de prosseguir, garanta que possui as ferramentas abaixo instaladas no seu ambiente:
 
 - [Docker + Docker Compose](https://docs.n8n.io/hosting/installation/docker/) configurados  
 - [WSL 2 (Windows Subsystem for Linux)](https://learn.microsoft.com/pt-br/windows/wsl/install) — é um requisito *não* obrigatorio mas pode ser útil para facilitar a execução  
