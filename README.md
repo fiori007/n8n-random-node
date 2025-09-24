@@ -6,8 +6,8 @@ Este projeto implementa um conector customizado para o n8n chamado Random, que u
 
 Antes de iniciar, certifique-se de ter os seguintes itens instalados em sua máquina:
 
-. [Docker + Docker Compose](https://docs.n8n.io/hosting/installation/docker/)
-. (Opcional) [WSL 2 (Windows Subsystem for Linux)](https://learn.microsoft.com/pt-br/windows/wsl/install) — caso esteja rodando em Windows
+. [Docker + Docker Compose](https://docs.n8n.io/hosting/installation/docker/)  
+. (Opcional) [WSL 2 (Windows Subsystem for Linux)](https://learn.microsoft.com/pt-br/windows/wsl/install) — caso esteja rodando em Windows  
 
 ---
 
@@ -42,8 +42,8 @@ Na raiz do projeto, suba o ambiente:
 ```bash
 docker compose up -d
 ```
-. O n8n ficará disponível em [http://localhost:5678](http://localhost:5678/).
-. O Postgres será usado como banco de dados persistente.
+. O n8n ficará disponível em [http://localhost:5678](http://localhost:5678/).  
+. O Postgres será usado como banco de dados persistente.  
 
 Para parar os serviços:
 
@@ -55,13 +55,13 @@ docker compose down
 
 ## Executar os testes
 
-1.Acesse o n8n em [http://localhost:5678](http://localhost:5678/).
-2.Crie um novo workflow.
-3.Adicione o node Random.
-4.Configure os parâmetros:
-  . Min: valor inteiro mínimo
-  . Max: valor inteiro máximo
-5.Clique em Execute Node.
+1.Acesse o n8n em [http://localhost:5678](http://localhost:5678/).  
+2.Crie um novo workflow.  
+3.Adicione o node Random.  
+4.Configure os parâmetros:  
+  . Min: valor inteiro mínimo  
+  . Max: valor inteiro máximo  
+5.Clique em Execute Node.  
 
 ---
 
