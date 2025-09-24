@@ -1,23 +1,30 @@
 # n8n Random Node
 
-Este projeto implementa um conector customizado para o n8n chamado Random, que utiliza a API do [Random.org](https://www.random.org/) para gerar números aleatórios entre um valor mínimo e máximo definidos pelo usuário.
+
+Este repositório contém um **nó customizado para o n8n** chamado **Random**, responsável por gerar números aleatórios dentro de um intervalo definido pelo usuário.  
+O nó utiliza a [API do Random.org](https://www.random.org/), oferecendo resultados de alta qualidade ao invés de simples pseudoaleatoriedade.
+
+---
 
 ## Pré-requisitos
 
 Antes de iniciar, certifique-se de ter os seguintes itens instalados em sua máquina:
 
-. [Docker + Docker Compose](https://docs.n8n.io/hosting/installation/docker/)  
-. (Opcional) [WSL 2 (Windows Subsystem for Linux)](https://learn.microsoft.com/pt-br/windows/wsl/install) — caso esteja rodando em Windows  
+- [Docker + Docker Compose](https://docs.n8n.io/hosting/installation/docker/) configurados  
+- (Opcional) [WSL 2 (Windows Subsystem for Linux)](https://learn.microsoft.com/pt-br/windows/wsl/install) — pode ser útil para facilitar a execução  
 
 ---
 
-## Configurar o ambiente
+## Preparando variáveis de ambiente
 
-Crie um arquivo .env na raiz do projeto. Você pode se basear neste exemplo: [Exemplo .env](https://github.com/fiori007/n8n-random-node/blob/main/.env)
+Na raiz do projeto, crie um arquivo chamado `.env`.  
+Você pode se guiar pelo modelo disponível em: [Exemplo .env](https://github.com/fiori007/n8n-random-node/blob/main/.env)
 
 ---
 
-## Instalar as dependências
+## Instalando dependências e compilando o projeto  
+
+Acesse a pasta do pacote:  
 
 ```bash
 cd custom-nodes/n8n-nodes-random
@@ -37,7 +44,7 @@ Isso gera os arquivos compilados na pasta ```dist/.```
 
 ## Executar o serviço localmente
 
-Na raiz do projeto, suba o ambiente:
+Na raiz do projeto, execute:
 
 ```bash
 docker compose up -d
@@ -55,13 +62,20 @@ docker compose down
 
 ## Executar os testes
 
-1.Acesse o n8n em [http://localhost:5678](http://localhost:5678/).  
-2.Crie um novo workflow.  
-3.Adicione o node Random.  
-4.Configure os parâmetros:  
-  . Min: valor inteiro mínimo  
-  . Max: valor inteiro máximo  
-5.Clique em Execute Node.  
+1. Acesse o n8n em [http://localhost:5678](http://localhost:5678/).  
+2. Crie um novo workflow.  
+3. Adicione o nó **Random**.  
+4. Configure os parâmetros:  
+  . Min -> valor inteiro mínimo  
+  . Max -> valor inteiro máximo  
+5. Clique em *Execute Node*.  
 
 ---
 
+## Tecnologias utilzadas  
+
+- *n8n*: v1.85.4
+
+- *Postgres*: v16
+
+- *Node.js*: v22 (LTS)
