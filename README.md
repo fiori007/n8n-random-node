@@ -49,8 +49,8 @@ Na raiz do projeto, execute:
 ```bash
 docker compose up -d
 ```
-. O n8n ficará disponível em [http://localhost:5678](http://localhost:5678/).  
-. O Postgres será usado como banco de dados persistente.  
+- O n8n ficará disponível em [http://localhost:5678](http://localhost:5678/).  
+- O Postgres será usado como banco de dados persistente.  
 
 Para parar os serviços:
 
