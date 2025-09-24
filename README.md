@@ -40,7 +40,7 @@ Isso gera os arquivos compilados na pasta ```dist/.```
 
 ---
 
-## Executar o serviço localmente
+## Subindo a aplicação com Docker Compose
 
 Na raiz do projeto, execute:
 
