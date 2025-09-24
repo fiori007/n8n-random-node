@@ -11,7 +11,7 @@ O nó utiliza a [API do Random.org](https://www.random.org/), oferecendo resulta
 Antes de iniciar, certifique-se de ter os seguintes itens instalados em sua máquina:
 
 - [Docker + Docker Compose](https://docs.n8n.io/hosting/installation/docker/) configurados  
-- (Opcional) [WSL 2 (Windows Subsystem for Linux)](https://learn.microsoft.com/pt-br/windows/wsl/install) — pode ser útil para facilitar a execução  
+- [WSL 2 (Windows Subsystem for Linux)](https://learn.microsoft.com/pt-br/windows/wsl/install) — é um requisito *não* obrigatorio mas pode ser útil para facilitar a execução  
 
 ---
 
