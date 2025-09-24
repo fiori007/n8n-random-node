@@ -48,7 +48,7 @@ Na raiz do projeto, execute:
 docker compose up -d
 ```
 - O n8n ficará disponível em [http://localhost:5678](http://localhost:5678/).  
-- O Postgres será usado como banco de dados persistente.  
+- O *Postgres* será usado como banco de dados persistente.  
 
 Para parar os serviços:
 
@@ -58,22 +58,22 @@ docker compose down
 
 ---
 
-## Executar os testes
+## Testando o nó Random no n8n
 
-1. Acesse o n8n em [http://localhost:5678](http://localhost:5678/).  
+1. Acesse a interface do n8n em [http://localhost:5678](http://localhost:5678/).  
 2. Crie um novo workflow.  
 3. Adicione o nó **Random**.  
 4. Configure os parâmetros:  
-  . Min -> valor inteiro mínimo  
-  . Max -> valor inteiro máximo  
+   - Min -> valor inteiro mínimo  
+   - Max -> valor inteiro máximo  
 5. Clique em *Execute Node*.  
 
 ---
 
 ## Tecnologias utilzadas  
 
-- *n8n*: v1.85.4
+- *n8n*: v1.85.4  
 
-- *Postgres*: v16
+- *Postgres*: v16  
 
-- *Node.js*: v22 (LTS)
+- *Node.js*: v22 (LTS)  
