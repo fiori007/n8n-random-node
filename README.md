@@ -27,5 +27,35 @@ Acesse a pasta do pacote:
 
 ```bash
 cd custom-nodes/n8n-nodes-random
+```
+Antes de instalar, limpe arquivos antigos (se existirem):
+```rm -rf node_modules package-lock.json dist```
+
+Agora, rode a instalação e o build usando Node.js 22 dentro de um container:
+``` docker run --rm -v "$PWD":/app -w /app node:22 bash -lc "npm install && npm run build" ```
+
+Após esse comando, os arquivos compilados estarão disponíveis em dist/.
+
+
+# Subindo a aplicação com Docker Compose
+
+Na raiz do projeto, execute:
+
+```docker compose up -d```
+
+O n8n ficará disponível em http://localhost:5678
+.
+
+O Postgres será usado como banco de dados persistente.
+
+Para parar os serviços:
+
+```docker compose down ```
+
+
+
+
+
+
 
 
