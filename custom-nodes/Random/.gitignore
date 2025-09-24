@@ -1,0 +1,4 @@
+node_modules/
+dist/
+.n8n/custom/
+.env
