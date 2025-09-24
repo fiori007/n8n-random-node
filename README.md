@@ -36,7 +36,7 @@ rm -rf node_modules package-lock.json dist
 docker run --rm -v "$PWD":/app -w /app node:22 bash -lc "npm install && npm run build"
 ```
 
-Isso gera os arquivos compilados na pasta ```dist/.```
+Após esse comando, os arquivos compilados estarão disponíveis em ```dist/.```
 
 ---
 
