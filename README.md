@@ -1,61 +1,67 @@
-# Node Customizado: Random para n8n
+# n8n Random Node
 
-Este repositório contém um **nó customizado para o n8n** chamado **Random**, responsável por gerar números aleatórios dentro de um intervalo definido pelo usuário.  
-O nó utiliza a [API do Random.org](https://www.random.org), oferecendo resultados de alta qualidade ao invés de simples pseudoaleatoriedade.
+Este projeto implementa um conector customizado para o n8n chamado Random, que utiliza a API do [Random.org](https://www.random.org/) para gerar números aleatórios entre um valor mínimo e máximo definidos pelo usuário.
 
----
+## Pré-requisitos
 
-## Requisitos básicos
+Antes de iniciar, certifique-se de ter os seguintes itens instalados em sua máquina:
 
-Antes de prosseguir, garanta que possui as ferramentas abaixo instaladas no seu ambiente:
-
-- [Docker e Docker Compose](https://docs.docker.com/get-docker/) configurados
-- (Para Windows) [WSL 2](https://learn.microsoft.com/pt-br/windows/wsl/install) pode ser útil para facilitar a execução
+. [Docker + Docker Compose](https://docs.n8n.io/hosting/installation/docker/)
+. (Opcional) [WSL 2 (Windows Subsystem for Linux)](https://learn.microsoft.com/pt-br/windows/wsl/install) — caso esteja rodando em Windows
 
 ---
 
-## Preparando variáveis de ambiente
+## Configurar o ambiente
 
-Na raiz do projeto, crie um arquivo chamado `.env`.  
-Você pode se guiar pelo modelo disponível em: [Exemplo .env](./.env).
+Crie um arquivo .env na raiz do projeto. Você pode se basear neste exemplo: [Exemplo .env](https://github.com/fiori007/n8n-random-node/blob/main/.env)
 
 ---
 
-## Instalando dependências e compilando o projeto
-
-Acesse a pasta do pacote:
+## Instalar as dependências
 
 ```bash
 cd custom-nodes/n8n-nodes-random
+
+# Limpar instalações anteriores
+rm -rf node_modules package-lock.json dist
+
+# Instalar e compilar usando Node.js 22 em container
+docker run --rm -v "$PWD":/app -w /app node:22 bash -lc "npm install && npm run build"
 ```
-Antes de instalar, limpe arquivos antigos (se existirem):
-```rm -rf node_modules package-lock.json dist```
 
-Agora, rode a instalação e o build usando Node.js 22 dentro de um container:
-``` docker run --rm -v "$PWD":/app -w /app node:22 bash -lc "npm install && npm run build" ```
+---
 
-Após esse comando, os arquivos compilados estarão disponíveis em dist/.
+Isso gera os arquivos compilados na pasta ```dist/.```
 
+---
 
-# Subindo a aplicação com Docker Compose
+## Executar o serviço localmente
 
-Na raiz do projeto, execute:
+Na raiz do projeto, suba o ambiente:
 
-```docker compose up -d```
-
-O n8n ficará disponível em http://localhost:5678
-.
-
-O Postgres será usado como banco de dados persistente.
+```bash
+docker compose up -d
+```
+. O n8n ficará disponível em [http://localhost:5678](http://localhost:5678/).
+. O Postgres será usado como banco de dados persistente.
 
 Para parar os serviços:
 
-```docker compose down ```
+```bash
+docker compose down
+```
 
+---
 
+## Executar os testes
 
+1.Acesse o n8n em [http://localhost:5678](http://localhost:5678/).
+2.Crie um novo workflow.
+3.Adicione o node Random.
+4.Configure os parâmetros:
+  . Min: valor inteiro mínimo
+  . Max: valor inteiro máximo
+5.Clique em Execute Node.
 
-
-
-
+---
 
